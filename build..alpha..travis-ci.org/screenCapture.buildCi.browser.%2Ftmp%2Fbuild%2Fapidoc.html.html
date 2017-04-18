@@ -1,0 +1,795 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/vanthome/winston-elasticsearch#readme">winston-elasticsearch (v0.5.0)</a>
+</h1>
+<h4>An Elasticsearch transport for winston</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.winston-elasticsearch">module winston-elasticsearch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.winston-elasticsearch">
+            function <span class="apidocSignatureSpan"></span>winston-elasticsearch
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.bulk_writer">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.</span>bulk_writer
+            <span class="apidocSignatureSpan">(client, interval, waitForActiveShards)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.super_">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.toString">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">winston-elasticsearch.</span>bulk_writer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">winston-elasticsearch.</span>super_.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.winston-elasticsearch.bulk_writer">module winston-elasticsearch.bulk_writer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.bulk_writer.bulk_writer">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.</span>bulk_writer
+            <span class="apidocSignatureSpan">(client, interval, waitForActiveShards)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.winston-elasticsearch.bulk_writer.prototype">module winston-elasticsearch.bulk_writer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.append">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>append
+            <span class="apidocSignatureSpan">(index, type, doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.flush">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>flush
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.schedule">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>schedule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.start">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.stop">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.tick">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>tick
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.winston-elasticsearch.super_">module winston-elasticsearch.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.super_.super_">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.winston-elasticsearch.super_.prototype">module winston-elasticsearch.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.super_.prototype.formatQuery">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.super_.prototype.</span>formatQuery
+            <span class="apidocSignatureSpan">(query)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.super_.prototype.formatResults">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.super_.prototype.</span>formatResults
+            <span class="apidocSignatureSpan">(results, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.super_.prototype.logException">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.super_.prototype.</span>logException
+            <span class="apidocSignatureSpan">(msg, meta, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-elasticsearch.super_.prototype.normalizeQuery">
+            function <span class="apidocSignatureSpan">winston-elasticsearch.super_.prototype.</span>normalizeQuery
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.winston-elasticsearch" id="apidoc.module.winston-elasticsearch">module winston-elasticsearch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.winston-elasticsearch" id="apidoc.element.winston-elasticsearch.winston-elasticsearch">
+        function <span class="apidocSignatureSpan"></span>winston-elasticsearch
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Elasticsearch(options) {
+  this.options = options || {};
+  if (!options.timestamp) {
+    this.options.timestamp = function timestamp() { return new Date().toISOString(); };
+  }
+  // Enforce context
+  if (!(this instanceof Elasticsearch)) {
+    return new Elasticsearch(options);
+  }
+
+  // Set defaults
+  const defaults = {
+    level: 'info',
+    index: null,
+    indexPrefix: 'logs',
+    indexSuffixPattern: 'YYYY.MM.DD',
+    messageType: 'log',
+    transformer: defaultTransformer,
+    ensureMappingTemplate: true,
+    flushInterval: 2000,
+    waitForActiveShards: 1,
+    handleExceptions: false
+  };
+  _.defaults(options, defaults);
+  winston.Transport.call(this, options);
+
+  // Use given client or create one
+  if (options.client) {
+    this.client = options.client;
+  } else {
+    // As we don't want to spam stdout, create a null stream
+    // to eat any log output of the ES client
+    const NullStream = function NullStream() {
+      stream.Writable.call(this);
+    };
+    util.inherits(NullStream, stream.Writable);
+    // eslint-disable-next-line no-underscore-dangle
+    NullStream.prototype._write = function _write(chunk, encoding, next) {
+      next();
+    };
+
+    const defaultClientOpts = {
+      clientOpts: {
+        log: [
+          {
+            type: 'stream',
+            level: 'error',
+            stream: new NullStream()
+          }
+        ]
+      }
+    };
+    _.defaults(options, defaultClientOpts);
+
+    // Create a new ES client
+    // http://localhost:9200 is the default of the client already
+    this.client = new elasticsearch.Client(this.options.clientOpts);
+  }
+
+  this.bulkWriter = new BulkWriter(this.client,
+      options.flushInterval, options.waitForActiveShards);
+  this.bulkWriter.start();
+
+  // Conduct initial connection check (sets connection state for further use)
+  this.checkEsConnection().then((connectionOk) =&gt; {});
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.bulk_writer" id="apidoc.element.winston-elasticsearch.bulk_writer">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.</span>bulk_writer
+        <span class="apidocSignatureSpan">(client, interval, waitForActiveShards)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BulkWriter(client, interval, waitForActiveShards) {
+  this.client = client;
+  this.interval = interval || 5000;
+  this.waitForActiveShards = waitForActiveShards;
+
+  this.bulk = []; // bulk to be flushed
+  this.running = false;
+  this.timer = false;
+  debug('created', this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.super_" id="apidoc.element.winston-elasticsearch.super_">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (options) {
+  events.EventEmitter.call(this);
+
+  options        = options        || {};
+  this.silent    = options.silent || false;
+  this.raw       = options.raw    || false;
+  this.name      = options.name   || this.name;
+  this.formatter = options.formatter;
+
+  //
+  // Do not set a default level. When `level` is falsey on any
+  // `Transport` instance, any `Logger` instance uses the
+  // configured level (instead of the Transport level)
+  //
+  this.level = options.level;
+
+  this.handleExceptions = options.handleExceptions || false;
+  this.exceptionsLevel  = options.exceptionsLevel || 'error';
+  this.humanReadableUnhandledException = options.humanReadableUnhandledException || false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.toString" id="apidoc.element.winston-elasticsearch.toString">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.winston-elasticsearch.bulk_writer" id="apidoc.module.winston-elasticsearch.bulk_writer">module winston-elasticsearch.bulk_writer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.bulk_writer.bulk_writer" id="apidoc.element.winston-elasticsearch.bulk_writer.bulk_writer">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.</span>bulk_writer
+        <span class="apidocSignatureSpan">(client, interval, waitForActiveShards)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BulkWriter(client, interval, waitForActiveShards) {
+  this.client = client;
+  this.interval = interval || 5000;
+  this.waitForActiveShards = waitForActiveShards;
+
+  this.bulk = []; // bulk to be flushed
+  this.running = false;
+  this.timer = false;
+  debug('created', this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.winston-elasticsearch.bulk_writer.prototype" id="apidoc.module.winston-elasticsearch.bulk_writer.prototype">module winston-elasticsearch.bulk_writer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.append" id="apidoc.element.winston-elasticsearch.bulk_writer.prototype.append">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>append
+        <span class="apidocSignatureSpan">(index, type, doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function append(index, type, doc) {
+  this.bulk.push({
+    index: {
+      _index: index, _type: type
+    }
+  });
+  this.bulk.push(doc);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    message,
+    level,
+    meta,
+    timestamp: this.options.timestamp()
+  };
+  const entry = this.options.transformer(logData);
+
+  this.bulkWriter.<span class="apidocCodeKeywordSpan">append</span>(
+    this.getIndexName(this.options),
+    this.options.messageType,
+    entry
+  );
+
+  callback(); // write is deferred, so no room for errors here :)
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.flush" id="apidoc.element.winston-elasticsearch.bulk_writer.prototype.flush">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>flush
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function flush() {
+  // write bulk to elasticsearch
+  const thiz = this;
+  if (this.bulk.length === 0) {
+    debug('nothing to flush');
+
+    return new Promise((resolve) =&gt; {
+      return resolve();
+    });
+  }
+
+  const bulk = this.bulk.concat();
+  this.bulk = [];
+  debug('going to write', bulk);
+  return this.client.bulk({
+    body: bulk,
+    waitForActiveShards: this.waitForActiveShards,
+    timeout: this.interval + 'ms',
+    type: this.type
+  }).catch((e) =&gt; {
+    // rollback this.bulk array
+    thiz.bulk = bulk.concat(thiz.bulk);
+    throw e;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }, this.interval);
+};
+
+BulkWriter.prototype.tick = function tick() {
+  debug('tick');
+  const thiz = this;
+  if (!this.running) { return; }
+  this.<span class="apidocCodeKeywordSpan">flush</span>()
+  .catch((e) =&gt; {
+    throw e;
+  })
+  .then(() =&gt; {
+    thiz.schedule();
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.schedule" id="apidoc.element.winston-elasticsearch.bulk_writer.prototype.schedule">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>schedule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function schedule() {
+  const thiz = this;
+  this.timer = setTimeout(() =&gt; {
+    thiz.tick();
+  }, this.interval);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const thiz = this;
+if (!this.running) { return; }
+this.flush()
+.catch((e) =&gt; {
+  throw e;
+})
+.then(() =&gt; {
+  thiz.<span class="apidocCodeKeywordSpan">schedule</span>();
+});
+};
+
+BulkWriter.prototype.flush = function flush() {
+// write bulk to elasticsearch
+const thiz = this;
+if (this.bulk.length === 0) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.start" id="apidoc.element.winston-elasticsearch.bulk_writer.prototype.start">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start() {
+  this.stop();
+  this.running = true;
+  this.tick();
+  debug('started');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // Create a new ES client
+    // http://localhost:9200 is the default of the client already
+    this.client = new elasticsearch.Client(this.options.clientOpts);
+  }
+
+  this.bulkWriter = new BulkWriter(this.client,
+      options.flushInterval, options.waitForActiveShards);
+  this.bulkWriter.<span class="apidocCodeKeywordSpan">start</span>();
+
+  // Conduct initial connection check (sets connection state for further use)
+  this.checkEsConnection().then((connectionOk) =&gt; {});
+
+  return this;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.stop" id="apidoc.element.winston-elasticsearch.bulk_writer.prototype.stop">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stop() {
+  this.running = false;
+  if (!this.timer) { return; }
+  clearTimeout(this.timer);
+  this.timer = null;
+  debug('stopped');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.bulk = []; // bulk to be flushed
+this.running = false;
+this.timer = false;
+debug('created', this);
+};
+
+BulkWriter.prototype.start = function start() {
+this.<span class="apidocCodeKeywordSpan">stop</span>();
+this.running = true;
+this.tick();
+debug('started');
+};
+
+BulkWriter.prototype.stop = function stop() {
+this.running = false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.bulk_writer.prototype.tick" id="apidoc.element.winston-elasticsearch.bulk_writer.prototype.tick">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.bulk_writer.prototype.</span>tick
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tick() {
+  debug('tick');
+  const thiz = this;
+  if (!this.running) { return; }
+  this.flush()
+  .catch((e) =&gt; {
+    throw e;
+  })
+  .then(() =&gt; {
+    thiz.schedule();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.timer = false;
+debug('created', this);
+};
+
+BulkWriter.prototype.start = function start() {
+this.stop();
+this.running = true;
+this.<span class="apidocCodeKeywordSpan">tick</span>();
+debug('started');
+};
+
+BulkWriter.prototype.stop = function stop() {
+this.running = false;
+if (!this.timer) { return; }
+clearTimeout(this.timer);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.winston-elasticsearch.super_" id="apidoc.module.winston-elasticsearch.super_">module winston-elasticsearch.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.super_.super_" id="apidoc.element.winston-elasticsearch.super_.super_">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.winston-elasticsearch.super_.prototype" id="apidoc.module.winston-elasticsearch.super_.prototype">module winston-elasticsearch.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.super_.prototype.formatQuery" id="apidoc.element.winston-elasticsearch.super_.prototype.formatQuery">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.super_.prototype.</span>formatQuery
+        <span class="apidocSignatureSpan">(query)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">formatQuery = function (query) {
+  return query;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.super_.prototype.formatResults" id="apidoc.element.winston-elasticsearch.super_.prototype.formatResults">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.super_.prototype.</span>formatResults
+        <span class="apidocSignatureSpan">(results, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">formatResults = function (results, options) {
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.super_.prototype.logException" id="apidoc.element.winston-elasticsearch.super_.prototype.logException">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.super_.prototype.</span>logException
+        <span class="apidocSignatureSpan">(msg, meta, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logException = function (msg, meta, callback) {
+  var self = this,
+      called;
+
+  if (this.silent) {
+    return callback();
+  }
+
+  function onComplete () {
+    if (!called) {
+      called = true;
+      self.removeListener('logged', onComplete);
+      self.removeListener('error', onComplete);
+      callback();
+    }
+  }
+
+  this.once('logged', onComplete);
+  this.once('error', onComplete);
+  this.log(self.exceptionsLevel, msg, meta, function () { });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-elasticsearch.super_.prototype.normalizeQuery" id="apidoc.element.winston-elasticsearch.super_.prototype.normalizeQuery">
+        function <span class="apidocSignatureSpan">winston-elasticsearch.super_.prototype.</span>normalizeQuery
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">normalizeQuery = function (options) {
+  //
+  // Use options similar to loggly.
+  // [See Loggly Search API](http://wiki.loggly.com/retrieve_events#optional)
+  //
+
+  options = options || {};
+
+  // limit
+  options.rows = options.rows || options.limit || 10;
+
+  // starting row offset
+  options.start = options.start || 0;
+
+  // now
+  options.until = options.until || new Date;
+  if (typeof options.until !== 'object') {
+    options.until = new Date(options.until);
+  }
+
+  // now - 24
+  options.from = options.from || (options.until - (24 * 60 * 60 * 1000));
+  if (typeof options.from !== 'object') {
+    options.from = new Date(options.from);
+  }
+
+
+  // 'asc' or 'desc'
+  options.order = options.order || 'desc';
+
+  // which fields to select
+  options.fields = options.fields;
+
+  return options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
