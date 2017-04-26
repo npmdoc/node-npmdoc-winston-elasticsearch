@@ -1,6 +1,6 @@
 # npmdoc-winston-elasticsearch
 
-#### api documentation for  [winston-elasticsearch (v0.5.0)](https://github.com/vanthome/winston-elasticsearch#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-winston-elasticsearch.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-winston-elasticsearch) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-winston-elasticsearch.svg)](https://travis-ci.org/npmdoc/node-npmdoc-winston-elasticsearch)
+#### basic api documentation for  [winston-elasticsearch (v0.5.0)](https://github.com/vanthome/winston-elasticsearch#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-winston-elasticsearch.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-winston-elasticsearch) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-winston-elasticsearch.svg)](https://travis-ci.org/npmdoc/node-npmdoc-winston-elasticsearch)
 
 #### An Elasticsearch transport for winston
 
@@ -100,7 +100,8 @@
         "mocha": "mocha ./test/*",
         "test": "npm run lint && npm run mocha"
     },
-    "version": "0.5.0"
+    "version": "0.5.0",
+    "bin": {}
 }
 ```
 
